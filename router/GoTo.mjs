@@ -3,6 +3,7 @@
 import MainMenu from '../pages/MainMenu.mjs';
 import Welcome from '../pages/Welcome.mjs';
 import Contact from '../pages/Contact.mjs';
+import About from '../pages/About.mjs';
 
 export default class GoTo {
   static welcome() {
@@ -15,6 +16,10 @@ export default class GoTo {
 
   static contact() {
     Contact.show();
+  }
+
+  static about() {
+    About.show();
   }
 }
 
