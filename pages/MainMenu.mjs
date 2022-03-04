@@ -10,14 +10,17 @@ export default class MainMenu {
     new MenuAlternative('About Me', 'GoTo.about()'),
     new MenuAlternative('Contact Me', 'GoTo.contact()'),
   ];
+  static style = [
+    'color: cyan;',
+    'color: coral;',
+    'color: black; background-image: linear-gradient(75deg, coral, cyan);',
+  ];
 
   static show() {
     console.clear();
     console.log(
       `%c${this.title}%c${this.desc}%c${formatMenu(this.menuAlternatives)}`,
-      'color: cyan;',
-      'color: coral;',
-      'color: black; background-image: linear-gradient(75deg, coral, cyan);'
+      ...this.style
     );
   }
 }

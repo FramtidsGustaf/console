@@ -11,15 +11,18 @@ export default class Contact {
     new MenuAlternative('   LinkedIn', 'Contact.linkedIn()'),
     new MenuAlternative('   GitHub', 'Contact.gitHub()'),
   ];
+  static style = [
+    'color: lime;',
+    'color: white;',
+    'background: url( "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" ) no-repeat; background-size: contain;',
+    'background: white url( "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/900px-Octicons-mark-github.svg.png" ) no-repeat; background-size: contain; color: black;',
+  ];
 
   static show() {
     console.clear();
     console.log(
       `%c${this.title}%c${this.desc}${formatMenu(this.MenuAlternatives, true)}`,
-      'color: lime;',
-      'color: white;',
-      "background: url( 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png' ) no-repeat; background-size: contain;",
-      "background: white url( 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/900px-Octicons-mark-github.svg.png' ) no-repeat; background-size: contain; color: black;"
+      ...this.style
     );
   }
 
